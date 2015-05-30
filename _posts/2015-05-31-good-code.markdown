@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Good Code"
+date:   2015-05-31 03:21:00
+categories: coding
+---
+
+**Good code is like good joke** There should not be any need to explain it - _Eloquent javascript_
+
