@@ -1,0 +1,15 @@
+# Site settings
+title: Yatin Sarbalia
+email: yatinsns@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Senior software engineer (Directi), leading iOS team.
+  Learning Ruby, Javascript and Haskell.
+  Fond of books, movies, music, table tennis, pool.
+  And a proud Dad.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: yatinsns
+github_username:  yatinsns
+
+# Build settings
+markdown: kramdown
