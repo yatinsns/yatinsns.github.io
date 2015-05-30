@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Resolutions
+title:  "Resolutions"
 date:   2015-05-30 20:31:00
 categories: personal
 ---
