@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What is Genius?"
-date:   2015-05-30 20:31:00
+date:   2015-06-08 21:15:00
 categories: saying
 ---
 
