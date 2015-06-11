@@ -2,12 +2,27 @@
 
 POSTS_DIR = ENV['POSTS_DIR']
 
-if POSTS_DIR.nil?
-  puts "Error: Environment variable 'POSTS_DIR' missing"
-  exit 1
+def contents
+  timestamp = `date "+%Y-%m-%d %H:%M:%S"`
+  contents = "---\n" +
+             "layout: post\n" +
+             "title: #{ARGV.join(' ')}\n" +
+             "date: #{timestamp.chomp}\n" +
+             "categories: \n" +
+             "---\n\n"
 end
 
-source_filename = ARGV.first
-dest_filename = `echo $(date "+%Y-%m-%d")"-#{ARGV.drop(1).join('-')}.markdown"`
-dest_filename = "#{POSTS_DIR}/#{dest_filename.chomp}"
-File.write(dest_filename, File.read(source_filename))
+def new_filename
+  new_filename = `echo $(date "+%Y-%m-%d")"-#{ARGV.join('-')}.markdown"`
+  "#{POSTS_DIR}/#{new_filename.chomp}"
+end
+
+def main
+  if POSTS_DIR.nil?
+    puts "Error: Environment variable 'POSTS_DIR' missing"
+    exit 1
+  end
+  File.write(new_filename, contents)
+end
+
+main if __FILE__ == $0
