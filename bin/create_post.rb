@@ -37,6 +37,11 @@ def main
   contents = "#{header title}#{File.read(source_filename)}"
 
   File.write(new_filename, contents)
+  
+  `cd #{POSTS_DIR}`
+  `git add #{new_filename}`
+  `git commit -m "Add post #{source_filename}"`
+  `git push origin master`
 end
 
 main if __FILE__ == $0
