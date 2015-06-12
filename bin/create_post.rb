@@ -13,7 +13,7 @@ def header title
 end
 
 def filename title
-  new_filename = `echo $(date "+%Y-%m-%d")"-#{title.gsub(' ', '-')}.markdown"`
+  new_filename = `echo $(date "+%Y-%m-%d")"-#{title.gsub(' ', '-')}.md"`
   "#{POSTS_DIR}/#{new_filename.chomp}"
 end
 
@@ -29,8 +29,8 @@ def main
   exit_with_error "Markdown filename missing.\nUsage: create_post.rb <filename.markdown>" unless source_filename
   exit_with_error "#{source_filename} does not exist" unless File.file? source_filename
 
-  index = source_filename.rindex(/\.markdown/)
-  exit_with_error "Filename does not contain '.markdown'" unless index
+  index = source_filename.rindex(/\.md/)
+  exit_with_error "Filename does not contain '.md'" unless index
 
   title = source_filename[0...index]
   new_filename = filename title
