@@ -5,7 +5,6 @@ date: 2015-06-12 22:38:06
 categories: 
 ---
 
-## Blog like a hacker
 
 The only part tough in blogging should be writing. Other stuff should be easy enough to focus on nothing else but writing.
 
