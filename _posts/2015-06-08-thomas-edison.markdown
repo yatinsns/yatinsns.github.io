@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What is Genius?"
+title:  "Are you Genius?"
 date:   2015-06-08 21:15:00
 categories: saying
 ---
