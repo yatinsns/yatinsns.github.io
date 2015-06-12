@@ -1,6 +1,6 @@
 ---
 layout: post
-title: blog-like-a-hacker
+title: Blog like a hacker
 date: 2015-06-12 22:38:06
 categories: 
 ---
