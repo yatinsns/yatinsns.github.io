@@ -1,11 +1,11 @@
 ---
 layout: post
-title: printf "Hello Chrome Extension"
+title: "Hello Chrome Extension"
 date: 2015-06-19 14:31:00
-categories:
+categories: programming
 ---
 
-## printf "Hello Chrome Extension"
+## "Hello Chrome Extension"
 
 Just wrote my first chrome extension using getting started tutorials provided by Google.
 
