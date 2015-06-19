@@ -1,6 +1,6 @@
 ---
 layout: post
-title: chromeextension
+title: printf "Hello Chrome Extension"
 date: 2015-06-19 14:31:00
 categories:
 ---
@@ -19,4 +19,6 @@ Just wrote my first chrome extension using getting started tutorials provided by
 	This chrome extension aims at downloading all those content links
 	automatically once browser action button is clicked.
 	(Other perfect solutions may exist as well!!!)
+
+[Github repository](https://github.com/yatinsns/content-downloader)
 	
