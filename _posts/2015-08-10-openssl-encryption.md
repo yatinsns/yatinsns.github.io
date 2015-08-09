@@ -17,8 +17,6 @@ enc -> encrypt/decrypt using secret key algorithms. It is possible to generate u
 	base64
 	…
 
-###
----
 
 ### base64
 
@@ -35,8 +33,6 @@ or
 	
 '-A' option required for bigger encrypted data.
 
-###
----
 
 ### aes-128-ecb mode with cipher key
 
@@ -57,8 +53,6 @@ Note:
 * Use 'hexdump -C' to check output of openssl commands.
 * '-nopad' option is added to remove OpenSSL's PKCS#7 padding to ensure there are full blocks. Refer [this](http://crypto.stackexchange.com/questions/12621/why-does-openssl-append-extra-bytes-when-encrypting-with-aes-8-ecb) for more details.
 
-###
----
 
 ### aes-256-cbc mode using password
 
