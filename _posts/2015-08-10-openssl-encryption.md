@@ -31,7 +31,7 @@ or
 
 	$ echo -n "YWJjZGVmZ2hpamtsbW5vcA==" | openssl enc -base64 -d -A
 	
-'-A' option required for bigger encrypted data.
+`-A` option required for bigger encrypted data.
 
 
 ### aes-128-ecb mode with cipher key
@@ -39,19 +39,34 @@ or
 
 ##### encryptyion
 
-	$ echo -n "abcdefghijklmnop" | openssl aes-128-ecb -K '59454c4c4f57205355424d4152494e45' -nosalt -v -nopad -out result1.bin
+	$ echo -n "abcdefghijklmnop" | openssl aes-128-ecb -K '59454c4c4f57205355424d4152494e45' -nosalt -v -nopad -out result.bin
+	$ openssl enc -base64 -in result.bin
 
 ##### decryption
 
-	$ openssl aes-128-ecb -d -K '59454c4c4f57205355424d4152494e45' -nosalt -nopad -in output.bin
-	$ openssl enc -base64 -in output.bin
+	$ openssl aes-128-ecb -d -K '59454c4c4f57205355424d4152494e45' -nosalt -nopad -in result.bin
+
+
+### aes-128-cbc mode with cipher key
+
+
+##### encryptyion
+
+	$ echo -n "abcdefghijklmnop" | openssl aes-128-cbc -K '59454c4c4f57205355424d4152494e45' -iv '00000000000000000000000000000000' -nosalt -v -nopad -out result.bin
+	$ openssl enc -base64 -in result.bin
+
+##### decryption
+
+	$ openssl aes-128-cbc -d -K '59454c4c4f57205355424d4152494e45' -iv '00000000000000000000000000000000' -nosalt -nopad -in result.bin
+
 	
 Note:
 
 * key should be in hexadecimal format
-* 'echo' adds newline character at end. So use 'echo -n' instead. 
-* Use 'hexdump -C' to check output of openssl commands.
-* '-nopad' option is added to remove OpenSSL's PKCS#7 padding to ensure there are full blocks. Refer [this](http://crypto.stackexchange.com/questions/12621/why-does-openssl-append-extra-bytes-when-encrypting-with-aes-8-ecb) for more details.
+* `echo` adds newline character at end. So use `echo -n` instead.
+* Use `hexdump -C` to check output of openssl commands.
+* `-nopad` option is added to remove OpenSSL's PKCS#7 padding to ensure there are full blocks. Refer [this](http://crypto.stackexchange.com/questions/12621/why-does-openssl-append-extra-bytes-when-encrypting-with-aes-8-ecb) for more details.
+* If you want to use PKCS#7 padding, don't use `-nopad` flog.
 
 
 ### aes-256-cbc mode using password
