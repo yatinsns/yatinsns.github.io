@@ -13,5 +13,7 @@ To begin with I am working on [Matasano Crypto Challenges](http://cryptopals.com
 	
 I am not sure how long I will be able to maintain this interest. Hoping for the best.
 
+Link to [solutions](https://github.com/yatinsns/matasano-crypto)
+
 ***Fingers crossed.***
 
