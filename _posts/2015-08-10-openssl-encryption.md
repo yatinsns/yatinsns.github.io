@@ -21,7 +21,7 @@ enc -> encrypt/decrypt using secret key algorithms. It is possible to generate u
 ### base64
 
 ##### encoding
-	$ echo -n “123456789” | openssl enc -base64
+	$ printf “123456789” | openssl enc -base64
 
 or
 	
@@ -29,7 +29,7 @@ or
 	
 ##### decoding
 
-	$ echo -n "YWJjZGVmZ2hpamtsbW5vcA==" | openssl enc -base64 -d -A
+	$ printf "YWJjZGVmZ2hpamtsbW5vcA==" | openssl enc -base64 -d -A
 	
 `-A` option required for bigger encrypted data.
 
@@ -39,7 +39,7 @@ or
 
 ##### encryptyion
 
-	$ echo -n "abcdefghijklmnop" | openssl aes-128-ecb -K '59454c4c4f57205355424d4152494e45' -nosalt -v -nopad -out result.bin
+	$ printf "abcdefghijklmnop" | openssl aes-128-ecb -K '59454c4c4f57205355424d4152494e45' -nosalt -v -nopad -out result.bin
 	$ openssl enc -base64 -in result.bin
 
 ##### decryption
@@ -52,7 +52,7 @@ or
 
 ##### encryptyion
 
-	$ echo -n "abcdefghijklmnop" | openssl aes-128-cbc -K '59454c4c4f57205355424d4152494e45' -iv '00000000000000000000000000000000' -nosalt -v -nopad -out result.bin
+	$ printf "abcdefghijklmnop" | openssl aes-128-cbc -K '59454c4c4f57205355424d4152494e45' -iv '00000000000000000000000000000000' -nosalt -v -nopad -out result.bin
 	$ openssl enc -base64 -in result.bin
 
 ##### decryption
@@ -63,7 +63,7 @@ or
 Note:
 
 * key should be in hexadecimal format
-* `echo` adds newline character at end. So use `echo -n` instead.
+* Don't use `echo`. It treats length of "0\n1" as 4 instead of 3. Use printf instead.
 * Use `hexdump -C` to check output of openssl commands.
 * `-nopad` option is added to remove OpenSSL's PKCS#7 padding to ensure there are full blocks. Refer [this](http://crypto.stackexchange.com/questions/12621/why-does-openssl-append-extra-bytes-when-encrypting-with-aes-8-ecb) for more details.
 * If you want to use PKCS#7 padding, don't use `-nopad` flog.
@@ -74,7 +74,7 @@ Note:
 ##### encryption
 
 	$ touch plain.txt
-	$ echo "I love OpenSSL!" > plain.txt
+	$ printf "I love OpenSSL!" > plain.txt
 	$ openssl enc -aes-256-cbc -in plain.txt -out encrypted.bin
 	enter aes-256-cbc encryption password: hello
 	Verifying - enter aes-256-cbc encryption password: hello
