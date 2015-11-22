@@ -1,6 +1,6 @@
 ---
 layout: post
-title: automation
+title: Automation
 date: 2015-11-22 21:40:51
 categories:
 ---
