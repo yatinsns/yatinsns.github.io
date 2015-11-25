@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bash-Gmail-Scripts
+title: Bash Gmail Scripts
 date: 2015-11-26 01:53:24
 categories:
 ---
