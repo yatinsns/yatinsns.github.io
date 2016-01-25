@@ -1,11 +1,10 @@
 ---
 layout: post
-title: ruby-koans
+title: Ruby Koans
 date: 2016-01-25 15:59:56
 categories:
 ---
 
-#Ruby Koans
 
 [RubyKoans](http://rubykoans.com) is an excellant approach to learn the Ruby language, syntax, structure, and some common functions and libraries. This also teaches you a testing culture. This requires tests to be fixed in order to progress.
 
