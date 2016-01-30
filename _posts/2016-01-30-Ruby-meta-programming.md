@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ruby-meta-programming
+title: Ruby meta-programming
 date: 2016-01-30 20:31:46
 categories:
 ---
